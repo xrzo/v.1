@@ -13,13 +13,13 @@ echo "
 	$---------$--------$
 	
 	\n";
-echo " $$$$$$$$$$ Auto  Story Viewer by Photolooz $$$$$$$$$$$$$$$$$$   \n";
-echo "  $-----$----$ Made by 🤑 @mohsanjid 🤑 $----$---$  \n\n";
-echo " Subscribe my Youtube channel $ PhotoLooz $ for more videos--😍
+echo " $$$$$$$$$$ Auto  Story Viewer by Pedja.zyzz  \n";
+echo "  $-----$----$ Made by 🤑 @pedja.zyzz 🤑 $----$---$  \n\n";
+echo " Zapratite me --😍
  \n\n";
-echo "[?] Input your instagram username : ";
+echo "[?] Unesite svoje korisnicko ime : ";
 $userig    = trim(fgets(STDIN, 1024));
-echo "[?] Input your instagram password : ";
+echo "[?] unesite vasu sifru : ";
 $passig    = trim(fgets(STDIN, 1024));
 //
 $useragent = generate_useragent();
@@ -41,8 +41,8 @@ if($ext->status == 'ok'){
     $uname       = $ext->logged_in_user->username;
     $uid         = $ext->logged_in_user->pk;
     saveCookie('./data/'.$cookieFile, $cookie."|".$useragent);
-    echo "[+] Login success....\n";
-    echo "[+] Data saved\n";
+    echo "[+] Uspesna prijava....\n";
+    echo "[+] Podaci sacuvani\n";
 } elseif($ext->error_type == 'checkpoint_challenge_required'){
 	$_SESSION['c_cookie']       = $cookie;
     $_SESSION['c_ua']           = $useragent;
@@ -91,23 +91,23 @@ if($ext->status == 'ok'){
 	            $cookie                 = $cookie;
 	            $useragent              = $challenge_ua;
 	            saveCookie('./data/'.$cookieFile, $cookie."|".$useragent);
-    			echo "[+] Login success....\n";
-    			echo "[+] Data saved\n";
+    			echo "[+] Uspesna prijava....\n";
+    			echo "[+] Podaci sacuvani\n";
 	        } else {
 	            echo "[!] Cookie die\n";
-	            echo "[!] Exit...\n";
+	            echo "[!] Izadji...\n";
 	        }
 	    }
     } else {
     	echo "[!] Failed sent verification code ".$cekpoint." - ".var_dump($_SESSION)."\n";
-    	echo "[!] Exit...\n";
+    	echo "[!] Izadji...\n";
     	exit();
     }
 } elseif($ext->error_type == 'bad_password'){
-	echo "[!] Invalid password\n";
-    echo "[!] Exit...\n";
+	echo "[!] Pogresna sifra\n";
+    echo "[!] Izadji...\n";
 } else {
     echo "[!] Unknown error : ".$ext->message."\n";
-    echo "[!] Exit...\n";
+    echo "[!] Izadji...\n";
 }
 ?>
