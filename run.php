@@ -16,7 +16,7 @@ echo "
 	$---------$--------$
 	
 	\n";
-echo "[o] $$$$$$$$$$ Auto  Story Viewer by Pedja.zyzz [o]\n";
+echo "[o] Auto  Story Viewer by Pedja.zyzz [o]\n";
 echo "  Made by @pedja.zyzz   \n\n";
 echo " Zapratite me na instagramu.
  \n\n";
