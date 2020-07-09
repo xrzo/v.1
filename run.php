@@ -145,7 +145,7 @@ if($cookie){
 							}
 							if($viewstory['status'] == 'ok'){
 								$reels_suc[count($reels_suc)] = $storyitem['id']."_".$getstory['reel']['user']['pk'];
-								echo "[~] ".date('H:i:s')." - Pregledan Story ".$stories['id']." \n";
+								echo "[~] ".date('d-m-Y H:i:s')." - Pregledan Story ".$stories['id']." \n";
 								saveData('./data/storyData.txt', $stories['reels']);
 								saveData('./data/daily/'.date('d-m-Y').'.txt', $stories['reels']);
 							}
