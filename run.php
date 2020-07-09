@@ -52,12 +52,12 @@ if($cookie){
 				$prox['user']		= 0;
 				$prox['is_socks5']	= 0;
 				//
-				echo "[~] Get followers of ".$target."\n";
+				echo "[~] Uzmite pratioce od ".$target."\n";
 				//echo "[~] Proxy ".$prox['ip']."\n";
 				$targetid	= json_decode(request(1, $useragent, 'users/'.$target.'/usernameinfo/', $cookie, 0, array(), $prox['ip'], $prox['user'], $prox['is_socks5'])[1], 1)['user']['pk'];
 				$gettarget	= proccess(1, $useragent, 'users/'.$targetid.'/info', $cookie, 0, array(), $prox['ip'], $prox['user'], $prox['is_socks5']);
 				$gettarget	= json_decode($gettarget[1], true);
-				echo "[~] [Media : ".$gettarget['user']['media_count']."] [Follower : ".$gettarget['user']['follower_count']."] [Following : ".$gettarget['user']['following_count']."]\n";
+				echo "[~] [Objave : ".$gettarget['user']['media_count']."] [Pratioci : ".$gettarget['user']['follower_count']."] [Pracenja : ".$gettarget['user']['following_count']."]\n";
 				$jumlah		= $countTarget;
 				if(!is_numeric($jumlah)){
 					$limit = 1;
@@ -88,7 +88,7 @@ if($cookie){
 					endfor;
 					if($req['next_max_id']){ $next = true; $next_id	= $req['next_max_id']; } else { $next = false; $next_id = '0'; }
 				} while(count($listids) <= $limit);
-				echo "[~] ".count($listids)." followers of ".$target." collected\n";
+				echo "[~] ".count($listids)." Pratioci od ".$target." prikupljeni\n";
 				$reels		= array();
 				$reels_suc	= array();
 				for($i = 0; $i < count($listids); $i++):
@@ -154,7 +154,7 @@ if($cookie){
 					endforeach;
 					echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte ".$sleep_2." sekundi, da zaobidjete blok\n"; sleep($sleep_2);
 				endfor;
-				echo "[~] ".count($reels)." story from ".$target." collected\n";
+				echo "[~] ".count($reels)." Stori od ".$target." prikupljeno\n";
 				echo "[~] ".count($reels_suc)." Stori od ".$target." oznaceno kao vidjeno\n";
 				echo "[~] ".count($today)." Reagovanih storija danas\n";
 				echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte 30 sekundi\n";
@@ -163,7 +163,7 @@ if($cookie){
 			if(count($today) > '1900'){
 				echo "[~] ".count($today)." Reagovanih storija danas\n";
 				echo "[~] Limit instagram api 2000 seen/day\n";
-				echo "[~] Sleep for 20 hours to bypass instagram limit\n";
+				echo "[~] Sacekajte 20h da zaobidjete blok.\n";
 				sleep(72000);
 				echo "[~] End sleep...\n\n";
 			}
