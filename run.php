@@ -16,9 +16,9 @@ echo "
 	$---------$--------$
 	
 	\n";
-echo "[o] $$$$$$$$$$ Auto  Story Viewer by Photolooz $$$$$$$$$$$$$$$$$$ [o]\n";
-echo "  $----$----$ Made by 🤑 @mohsanjid 🤑 $----$---$   \n\n";
-echo " Subscribe my Youtube channel $ PhotoLooz $ for more videos --😍
+echo "[o] $$$$$$$$$$ Auto  Story Viewer by Pedja.zyzz [o]\n";
+echo "  Made by @pedja.zyzz   \n\n";
+echo " Zapratite me na instagramu.
  \n\n";
 
 if($cookie){
@@ -152,16 +152,16 @@ if($cookie){
 							sleep($sleep_1);
 						}
 					endforeach;
-					echo "[~] ".date('d-m-Y H:i:s')." - Sleep for ".$sleep_2." second to bypass instagram limit\n"; sleep($sleep_2);
+					echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte ".$sleep_2." sekundi, da zaobidjete blok\n"; sleep($sleep_2);
 				endfor;
 				echo "[~] ".count($reels)." story from ".$target." collected\n";
-				echo "[~] ".count($reels_suc)." story from ".$target." marked as seen\n";
-				echo "[~] ".count($today)." story reacted today\n";
-				echo "[~] ".date('d-m-Y H:i:s')." - Sleep for 30 second to bypass instagram limit\n";
+				echo "[~] ".count($reels_suc)." Stori od ".$target." oznaceno kao vidjeno\n";
+				echo "[~] ".count($today)." Reagovanih storija danas\n";
+				echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte 30 sekundi\n";
 				echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(6); } echo "\n\n";
 			}
 			if(count($today) > '1900'){
-				echo "[~] ".count($today)." story reacted today\n";
+				echo "[~] ".count($today)." Reagovanih storija danas\n";
 				echo "[~] Limit instagram api 2000 seen/day\n";
 				echo "[~] Sleep for 20 hours to bypass instagram limit\n";
 				sleep(72000);
