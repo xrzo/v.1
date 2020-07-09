@@ -110,7 +110,7 @@ if($cookie){
 								if($react_1['status'] == 'ok'){
 									echo "[~] ".date('d-m-Y H:i:s')." - Success polling for ".$stories['id']."\n";
 								}
-								//echo "[Stories Polls True : ".$stories['pool_id']." : ".$react_1[1]."] ";
+								echo "[Stories Polls True : ".$stories['pool_id']." : ".$react_1[1]."] ";
 							}
 							if($storyitem['story_questions']){
 								$stories['question_id']	= $storyitem['story_questions'][0]['question_sticker']['question_id'];
@@ -152,16 +152,16 @@ if($cookie){
 							sleep($sleep_1);
 						}
 					endforeach;
-					echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte ".$sleep_2." sekundi, da zaobidjete blok\n"; sleep($sleep_2);
+					echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte ".$sleep_2." sekundi, da zaobidjete blok..\n"; sleep($sleep_2);
 				endfor;
-				echo "[~] ".count($reels)." Stori od ".$target." prikupljeno\n";
-				echo "[~] ".count($reels_suc)." Stori od ".$target." oznaceno kao vidjeno\n";
-				echo "[~] ".count($today)." Reagovanih storija danas\n";
-				echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte 30 sekundi\n";
+				echo "[~] ".count($reels)." Stori od ".$target." prikupljeno.\n";
+				echo "[~] ".count($reels_suc)." Stori od ".$target." oznaceno kao vidjeno.\n";
+				echo "[~] ".count($today)." Reagovanih storija danas.\n";
+				echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte 30 sekundi.\n";
 				echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(6); } echo "\n\n";
 			}
 			if(count($today) > '1900'){
-				echo "[~] ".count($today)." Reagovanih storija danas\n";
+				echo "[~] ".count($today)." Reagovanih storija danas.\n";
 				echo "[~] Limit instagram api 2000 seen/day\n";
 				echo "[~] Sacekajte 20h da zaobidjete blok.\n";
 				sleep(72000);
