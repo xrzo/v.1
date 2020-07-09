@@ -1,7 +1,7 @@
 <?php
 include('func.php');
 include('igfunc.php');
-date_default_timezone_set('Asia/Jakarta');
+date_default_timezone_set('Europe/Belgrade');
 error_reporting(0);
 /*
 Jika akun terkena feedback_required tenang, tinggal tunggu 24 jam ntar pulih lagi
@@ -9,8 +9,8 @@ Jika akun terkena feedback_required tenang, tinggal tunggu 24 jam ntar pulih lag
 */
 
 //UBAH BAGIAN INI
-$countTarget    = '20'; //Ambil jumlah akun per target
-$sleep_1        = '5'; //Jeda per view story
+$countTarget    = '20'; //Broj naloga po cilju.
+$sleep_1        = '5'; //Pauziraj po priči
 $sleep_2        = '5'; //Jeda per view story 1 akun user
 //SAMPAI SINI AJA
 
