@@ -28,9 +28,9 @@ if($cookie){
 		//LOSS
 		$getakunV2	= proccess(1, $useragent, 'users/'.$getakun['user']['pk'].'/info', $cookie);
 		$getakunV2	= json_decode($getakunV2[1], true);
-		echo "[~] Login as @".$getakun['user']['username']." \n";
-		echo "[~] [Media : ".$getakunV2['user']['media_count']."] [Follower : ".$getakunV2['user']['follower_count']."] [Following : ".$getakunV2['user']['following_count']."]\n";
-		echo "[~] Please wait 5 second for loading script\n";
+		echo "[~] Prijavljeni ste kao @".$getakun['user']['username']." \n";
+		echo "[~] [Objave : ".$getakunV2['user']['media_count']."] [Pratioci : ".$getakunV2['user']['follower_count']."] [Pracenja : ".$getakunV2['user']['following_count']."]\n";
+		echo "[~] Sacekajte 5 sekundi, da se skripta ocita.\n";
 		echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(1); } echo "\n\n";
 		do {
 			$targets	= file_get_contents('./data/'.$targetFile);
