@@ -14,12 +14,12 @@ echo "
 	
 	\n";
 echo " $$$$$$$$$$ Auto  Story Viewer by Pedja.zyzz  \n";
-echo "  $-----$----$ Made by 🤑 @pedja.zyzz 🤑 $----$---$  \n\n";
+echo "  $-----$----$ Made by @pedja.zyzz $----$---$  \n\n";
 echo " Zapratite me --😍
  \n\n";
 echo "[?] Unesite svoje korisnicko ime : ";
 $userig    = trim(fgets(STDIN, 1024));
-echo "[?] unesite vasu sifru : ";
+echo "[?] Unesite vasu sifru : ";
 $passig    = trim(fgets(STDIN, 1024));
 //
 $useragent = generate_useragent();
@@ -42,7 +42,7 @@ if($ext->status == 'ok'){
     $uid         = $ext->logged_in_user->pk;
     saveCookie('./data/'.$cookieFile, $cookie."|".$useragent);
     echo "[+] Uspesna prijava....\n";
-    echo "[+] Podaci sacuvani\n";
+    echo "[+] Podaci sacuvani...\n";
 } elseif($ext->error_type == 'checkpoint_challenge_required'){
 	$_SESSION['c_cookie']       = $cookie;
     $_SESSION['c_ua']           = $useragent;
@@ -92,7 +92,7 @@ if($ext->status == 'ok'){
 	            $useragent              = $challenge_ua;
 	            saveCookie('./data/'.$cookieFile, $cookie."|".$useragent);
     			echo "[+] Uspesna prijava....\n";
-    			echo "[+] Podaci sacuvani\n";
+    			echo "[+] Podaci sacuvani...\n";
 	        } else {
 	            echo "[!] Cookie die\n";
 	            echo "[!] Izadji...\n";
