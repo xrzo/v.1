@@ -88,7 +88,7 @@ if($cookie){
 					endfor;
 					if($req['next_max_id']){ $next = true; $next_id	= $req['next_max_id']; } else { $next = false; $next_id = '0'; }
 				} while(count($listids) <= $limit);
-				echo "[~] ".count($listids)." Pratioci od ".$target." prikupljeni\n";
+				echo "[~] ".count($listids)." Pratioca prikupljeno od - ".$target." korisnika..\n";
 				$reels		= array();
 				$reels_suc	= array();
 				for($i = 0; $i < count($listids); $i++):
@@ -121,13 +121,13 @@ if($cookie){
 								if($react_2['status'] == 'ok'){
 									echo "[~] ".date('d-m-Y H:i:s')." - Question answer for ".$stories['id']." : ".$textAnswer." \n";
 								}
-								//echo "[Stories Question True : ".$stories['question_id']." : ".$react_2[1]."] ";
+								echo "[Stories Question True : ".$stories['question_id']." : ".$react_2[1]."] ";
 							}
 							if($storyitem['story_countdowns']){
 								$stories['countdown_id']	= $storyitem['story_countdowns'][0]['countdown_sticker']['countdown_id'];
 								$react_3	  				= proccess(1, $useragent, 'media/'.$stories['countdown_id'].'/follow_story_countdown/', $cookie, 0, array(), $prox['ip'], $prox['user'], $prox['is_socks5']);
 								$react_3					= json_decode($react_3[1], true);
-								//echo "[Stories Countdown True : ".$stories['countdown_id']." : ".$react_3[1]."] ";
+								echo "[Stories Countdown True : ".$stories['countdown_id']." : ".$react_3[1]."] ";
 							}
 							if($storyitem['story_sliders']){
 								$stories['slider_id']	= $storyitem['story_sliders'][0]['slider_sticker']['slider_id'];
@@ -136,12 +136,12 @@ if($cookie){
 								if($react_2['status'] == 'ok'){
 									echo "[~] ".date('d-m-Y H:i:s')." - Success sent slider for ".$stories['id']."\n";
 								}
-								//echo "[Stories Slider True : ".$stories['slider_id']." : ".$react_4[1]."] ";
+								echo "[Stories Slider True : ".$stories['slider_id']." : ".$react_4[1]."] ";
 							}
 							if($storyitem['story_quizs']){
 								$stories['quiz_id']	= $storyitem['story_quizs'][0]['quiz_sticker']['quiz_id'];
-								//$react_5	  		= proccess(1, $useragent, 'media/'.$stories['id'].'/'.$stories['quiz_id'].'/story_poll_vote/', $cookie, hook('{"radio_type": "none", "vote": "'.rand(0,3).'"}'));
-								//echo "[Stories Quiz True : ".$stories['quiz_id']." : ".$react_5[1]."] ";
+								$react_5	  		= proccess(1, $useragent, 'media/'.$stories['id'].'/'.$stories['quiz_id'].'/story_poll_vote/', $cookie, hook('{"radio_type": "none", "vote": "'.rand(0,3).'"}'));
+								echo "[Stories Quiz True : ".$stories['quiz_id']." : ".$react_5[1]."] ";
 							}
 							if($viewstory['status'] == 'ok'){
 								$reels_suc[count($reels_suc)] = $storyitem['id']."_".$getstory['reel']['user']['pk'];
@@ -152,7 +152,7 @@ if($cookie){
 							sleep($sleep_1);
 						}
 					endforeach;
-					echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte ".$sleep_2." sekundi, da zaobidjete blok..\n"; sleep($sleep_2);
+					echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte ".$sleep_2." sekundi..\n"; sleep($sleep_2);
 				endfor;
 				echo "[~] ".count($reels)." Stori od ".$target." prikupljeno.\n";
 				echo "[~] ".count($reels_suc)." Stori od ".$target." oznaceno kao vidjeno.\n";
