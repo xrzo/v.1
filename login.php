@@ -13,13 +13,12 @@ echo "
 	$---------$--------$
 	
 	\n";
-echo " $$$$$$$$$$ Auto  Story Viewer by Pedja.zyzz  \n";
+echo " $$$$$$$$$$ Auto  Story Viewer \n";
 echo "  $-----$----$ Made by @pedja.zyzz $----$---$  \n\n";
-echo " Zapratite me --😍
- \n\n";
-echo "[?] Unesite svoje korisnicko ime : ";
+
+echo "[?] Unesite svoje korisničko ime : ";
 $userig    = trim(fgets(STDIN, 1024));
-echo "[?] Unesite vasu sifru : ";
+echo "[?] Unesite vašu šifru : ";
 $passig    = trim(fgets(STDIN, 1024));
 //
 $useragent = generate_useragent();
@@ -91,8 +90,8 @@ if($ext->status == 'ok'){
 	            $cookie                 = $cookie;
 	            $useragent              = $challenge_ua;
 	            saveCookie('./data/'.$cookieFile, $cookie."|".$useragent);
-    			echo "[+] Uspesna prijava....\n";
-    			echo "[+] Podaci sacuvani...\n";
+    			echo "[+] Uspešna prijava....\n";
+    			echo "[+] Podaci sačuvani...\n";
 	        } else {
 	            echo "[!] Cookie die\n";
 	            echo "[!] Izadji...\n";
@@ -104,7 +103,7 @@ if($ext->status == 'ok'){
     	exit();
     }
 } elseif($ext->error_type == 'bad_password'){
-	echo "[!] Pogresna sifra\n";
+	echo "[!] Pogrešna šifra\n";
     echo "[!] Izadji...\n";
 } else {
     echo "[!] Unknown error : ".$ext->message."\n";
