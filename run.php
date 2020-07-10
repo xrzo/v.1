@@ -29,7 +29,7 @@ if($cookie){
 		$getakunV2	= proccess(1, $useragent, 'users/'.$getakun['user']['pk'].'/info', $cookie);
 		$getakunV2	= json_decode($getakunV2[1], true);
 		echo "[~] Prijavljeni ste kao @".$getakun['user']['username']." \n";
-		echo "[~] [Objave : ".$getakunV2['user']['media_count']."] [Pratioci : ".$getakunV2['user']['follower_count']."] [Pracenja : ".$getakunV2['user']['following_count']."]\n";
+		echo "[~] [Objave : ".$getakunV2['user']['media_count']."] [Pratioci : ".$getakunV2['user']['follower_count']."] [Praćenja : ".$getakunV2['user']['following_count']."]\n";
 		echo "[~] Sačekajte 5 sekundi, da se skripta očita.\n";
 		echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(1); } echo "\n\n";
 		do {
@@ -152,12 +152,12 @@ if($cookie){
 							sleep($sleep_1);
 						}
 					endforeach;
-					echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte ".$sleep_2." sekundi..\n"; sleep($sleep_2);
+					echo "[~] ".date('d-m-Y H:i:s')." - Sačekajte ".$sleep_2." sekundi..\n"; sleep($sleep_2);
 				endfor;
 				echo "[~] ".count($reels)." Stori od ".$target." prikupljeno.\n";
-				echo "[~] ".count($reels_suc)." Stori od ".$target." oznaceno kao vidjeno.\n";
+				echo "[~] ".count($reels_suc)." Stori od ".$target." označeno kao vidjeno.\n";
 				echo "[~] ".count($today)." Reagovanih storija danas.\n";
-				echo "[~] ".date('d-m-Y H:i:s')." - Sacekajte 30 sekundi.\n";
+				echo "[~] ".date('d-m-Y H:i:s')." - Sačekajte 30 sekundi.\n";
 				echo "[~] "; for($x = 0; $x <= 4; $x++){ echo "========"; sleep(6); } echo "\n\n";
 			}
 			if(count($today) > '1900'){
