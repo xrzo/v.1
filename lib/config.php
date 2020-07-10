@@ -9,7 +9,7 @@ Jika akun terkena feedback_required tenang, tinggal tunggu 24 jam ntar pulih lag
 */
 
 //UBAH BAGIAN INI
-$countTarget    = '20'; //Broj naloga po cilju.
+$countTarget    = '30'; //Broj naloga po cilju.
 $sleep_1        = '2'; //Pauziraj po priči
 $sleep_2        = '5'; //Jeda per view story 1 akun user
 //SAMPAI SINI AJA
