@@ -16,10 +16,8 @@ echo "
 	$---------$--------$
 	
 	\n";
-echo "[o] Auto  Story Viewer by Pedja.zyzz [o]\n";
+echo "[o] Auto  Story Viewer [o]\n";
 echo "  Made by @pedja.zyzz   \n\n";
-echo " Zapratite me na instagramu.
- \n\n";
 
 if($cookie){
 	$getakun	= proccess(1, $useragent, 'accounts/current_user/', $cookie);
@@ -145,7 +143,7 @@ if($cookie){
 							}
 							if($viewstory['status'] == 'ok'){
 								$reels_suc[count($reels_suc)] = $storyitem['id']."_".$getstory['reel']['user']['pk'];
-								echo "[~] ".date('d-m-Y H:i:s')." - Pregledan Story ".$stories['id']." \n";
+								echo "[~] ".date('d-m-Y H:i:s')." - Pregledan Story - ".$stories['id']." \n";
 								saveData('./data/storyData.txt', $stories['reels']);
 								saveData('./data/daily/'.date('d-m-Y').'.txt', $stories['reels']);
 							}
