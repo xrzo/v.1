@@ -41,7 +41,7 @@ if($ext->status == 'ok'){
     $uid         = $ext->logged_in_user->pk;
     saveCookie('./data/'.$cookieFile, $cookie."|".$useragent);
     echo "[+] Uspesna prijava....\n";
-    echo "[+] Podaci sacuvani...\n";
+    echo "[+] Podaci sačuvani...\n";
 } elseif($ext->error_type == 'checkpoint_challenge_required'){
 	$_SESSION['c_cookie']       = $cookie;
     $_SESSION['c_ua']           = $useragent;
