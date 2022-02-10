@@ -7,7 +7,7 @@ $loop			= true;
 //feed/user/{$userId}/story/
 echo "
  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        🅼🅰🆂🆂 🅻🅾🅾🅺🅴🆁 
+        🅼🅰🆂🆂 
 	$---------$--------$
 	1.Mass story views without Action block
 	2.Reacts to stories
